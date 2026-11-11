@@ -21,7 +21,7 @@ export const foodNotes:Record<string,FoodNote>={
 // Photographs illustrate the dish, not necessarily the exact serving at each venue.
 const foodIllustrations:Record<string,[string,string,string,string,string]>={
   dotonbori:['たこ焼き','Octopus balls',takoyakiPhoto,'ZhengZhou','CC BY-SA 4.0'],
-  'Kushikatsu por Shinsekai':['串カツ','Deep-fried skewers','Osaka kushiage kushikatsu (3818694686).jpg','nakashi','CC BY-SA 2.0'],
+  'Kushikatsu por Shinsekai':['串カツ','Deep-fried skewers','Kushikatsu (3603151166).jpg','chrisada','CC BY 2.0'],
   'Cena en Hozenji Yokocho':['お好み焼き','Savoury pancake','Okonomiyaki_in_Osaka.JPG','Zheng Zhou','CC BY-SA 4.0'],
   'Nigiwai Ichiba, puerto de Katsuura':['まぐろ丼','Tuna rice bowl','Maguro-don.jpg','Kanko','CC BY 2.0'],
   'Restaurantes de atún en Kii-Katsuura':['まぐろ丼','Tuna rice bowl','Maguro-don.jpg','Kanko','CC BY 2.0'],
@@ -32,10 +32,41 @@ const foodIllustrations:Record<string,[string,string,string,string,string]>={
   'Comida tradicional en Asakusa':['天ぷら','Tempura','Tempura served with salt in Kyoto.jpg','ZhengZhou','CC BY-SA 4.0'],
   'Omoide Yokocho':['焼き鳥','Grilled chicken skewers','Yakitoriplate2011jan.jpg','Nesnad','CC BY 3.0'],
   'Manna, Shinjuku Nakamuraya':['インドカリー','Indian curry','Japanese curry rice 1 2021-11-28.jpeg','FASTILY','CC BY-SA 4.0'],
+  'Mochi de Nara':['よもぎ餅','Mugwort mochi','Yomogi mochi.JPG','Midori','CC BY-SA 3.0'],
+  'Somen de Nara':['三輪そうめん','Miwa somen','Miwa somen 01.jpg','ちぃこ','CC BY 2.1 JP'],
+  'Dulce de Asakusa':['人形焼','Ningyo-yaki','Ningho-Yaki.JPG','Shoestring','Dominio público'],
+  'Ramen de Tokio':['ラーメン','Ramen','Bowl of ramen.jpg','Douglas Perkins','CC BY 4.0'],
+  'Atún de Kuromon':['まぐろ丼','Tuna rice bowl','Maguro-don.jpg','Kanko','CC BY 2.0'],
+  'Cena en Pontocho':['湯豆腐','Hot tofu','Yudofu meal set in Kyoto.jpg','ZhengZhou','CC BY-SA 4.0'],
 };
+Object.assign(foodNotes,{
+  'Mochi de Nara':{title:'Yomogi mochi',description:'Dulce de arroz con artemisa japonesa, que le da el color verde. Preguntad por él en Nakatanidō y comprobad el precio del día.',source:'https://www.visitnara.jp/venues/S01048/'},
+  'Somen de Nara':{title:'Miwa somen',description:'Fideos finos tradicionales de la prefectura de Nara. Son una sugerencia para comer sentados si aparecen en la carta del local elegido.',source:'https://visitnara.jp/eat-and-drink/'},
+  'Dulce de Asakusa':{title:'Ningyo-yaki',description:'Bizcochitos con formas tradicionales, normalmente rellenos de pasta dulce de judía. Buscadlos en Nakamise si os apetece un bocado típico.',source:'https://www.gotokyo.org/en/destinations/eastern-tokyo/asakusa/'},
+  'Ramen de Tokio':{title:'Ramen',description:'Un cuenco de fideos en caldo es una opción para una cena informal cerca de Tokyo Station. La foto es orientativa; elegid local y tipo de caldo allí.',source:'https://www.gotokyo.org/en/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html'},
+  'Atún de Kuromon':{title:'Cuenco de atún',description:'En el mercado de Kuromon podéis buscar pescado preparado al momento. Este cuenco de atún es una opción visual; comprobad qué ofrece cada puesto y su precio.',source:'https://www.osaka-info.jp/en/spot/gastronomy-kuromon/'},
+  'Cena en Pontocho':{title:'Yudofu',description:'Si os apetece cocina de Kioto, el tofu caliente es una opción tradicional. La fotografía muestra cómo puede presentarse, pero comprobad si figura en la carta del restaurante elegido.',source:'https://kyoto.travel/en/food-and-drink/'},
+});
 for(const [key,[japanese,english,file,imageCredit,imageLicense]] of Object.entries(foodIllustrations)){
   const note=foodNotes[key];
   if(!note)continue;
   Object.assign(note,{japanese,english,image:commonsImage(file),imageCredit,imageLicense,imagePage:commonsPage(file)});
 }
+
+// These day-level suggestions point to a concrete dish; generic meals have no fixed menu.
+export const foodTipNotes:Record<string,string>={
+  'kuromon-food':'Atún de Kuromon',
+  'dotonbori-dinner':'dotonbori',
+  'katsuura-seafood':'Nigiwai Ichiba, puerto de Katsuura',
+  'nigiwai-tuna':'Nigiwai Ichiba, puerto de Katsuura',
+  'nishiki-tasting':'Nishiki Market',
+  'pontocho-dinner':'Cena en Pontocho',
+  'nara-mochi':'Mochi de Nara',
+  'nara-lunch':'Somen de Nara',
+  'hida-beef':'Puestos de Hida beef en el casco antiguo',
+  'marunouchi-dining':'Ramen de Tokio',
+  'asakusa-snacks':'Dulce de Asakusa',
+  'asakusa-dinner':'Comida tradicional en Asakusa',
+  'omoide-yokocho':'Omoide Yokocho',
+};
 
