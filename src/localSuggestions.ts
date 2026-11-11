@@ -7,8 +7,7 @@ export const localSuggestions:Record<string,Suggestion[]>={
     {kind:'Para sentarse',title:'Cena en Hozenji Yokocho',detail:'Callejón de Namba con restaurantes tradicionales y mesas para una cena con calma. Elegid local según carta y disponibilidad.',map:map('Hozenji Yokocho Osaka restaurants'),source:'https://www.osaka-info.jp/en/spot/hozenji-yokocho/'},
   ],
   '16':[
-    {kind:'Comida informal',title:'Nigiwai Ichiba, puerto de Katsuura',detail:'Mercado con puestos de atún y productos locales. Conviene confirmar la hora de cierre antes de subir a Nachi.',map:map('Katsuura Port Nigiwai Market'),source:'https://www.town.nachikatsuura.wakayama.jp/info/646'},
-    {kind:'Para sentarse',title:'Restaurantes de atún en Kii-Katsuura',detail:'La oficina turística publica un directorio de restaurantes locales. Elegid uno según el tiempo real de regreso y comprobad si admite mesa.',map:map('Kii-Katsuura tuna restaurant'),source:'https://nachikan.jp/restaurant/list/'},
+    {kind:'Para sentarse',title:'Soba y pescado en Kii-Katsuura',detail:'También hay restaurantes de fideos soba y pescado local. Elegid uno al regresar de Nachi y comprobad horario, carta y si admite mesa; el mercado de Nigiwai queda para la mañana siguiente.',map:map('Kii-Katsuura soba seafood restaurant'),source:'https://nachikan.jp/en/restaurant/'},
   ],
   '18':[
     {kind:'Rincón local',title:'Calles de Fushimi',detail:'Zona histórica con identidad propia más allá de las visitas principales. Solo si queda una franja libre tras el recorrido previsto.',map:map('Fushimi sake district Kyoto'),source:'https://kyoto.travel/en/hidden-gems?article_categories%5B%5D=food_drink'},
@@ -28,3 +27,4 @@ export const localSuggestions:Record<string,Suggestion[]>={
     {kind:'Para sentarse',title:'Manna, Shinjuku Nakamuraya',detail:'Restaurante citado por la guía oficial de Shinjuku; opción de mesa para una cena más tranquila. Comprobad horario vigente.',map:map('Shinjuku Nakamuraya Manna restaurant'),source:'https://www.gotokyo.org/book/wp-content/uploads/2025/07/2507_shinjuku_mapguide_EN_low.pdf'},
   ],
 };
+

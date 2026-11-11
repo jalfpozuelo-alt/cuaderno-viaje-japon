@@ -38,6 +38,8 @@ const foodIllustrations:Record<string,[string,string,string,string,string]>={
   'Ramen de Tokio':['ラーメン','Ramen','Bowl of ramen.jpg','Douglas Perkins','CC BY 4.0'],
   'Atún de Kuromon':['まぐろ丼','Tuna rice bowl','Maguro-don.jpg','Kanko','CC BY 2.0'],
   'Cena en Pontocho':['湯豆腐','Hot tofu','Yudofu meal set in Kyoto.jpg','ZhengZhou','CC BY-SA 4.0'],
+  'Pescado local guisado':['煮魚','Simmered fish','Umitanago Nitsuke.jpg','Totti','CC BY-SA 4.0'],
+  'Soba y pescado en Kii-Katsuura':['ざるそば','Cold soba noodles','ZaruSoba.jpg','Chris 73','CC BY-SA 3.0'],
 };
 Object.assign(foodNotes,{
   'Mochi de Nara':{title:'Yomogi mochi',description:'Dulce de arroz con artemisa japonesa, que le da el color verde. Preguntad por él en Nakatanidō y comprobad el precio del día.',source:'https://www.visitnara.jp/venues/S01048/'},
@@ -46,6 +48,8 @@ Object.assign(foodNotes,{
   'Ramen de Tokio':{title:'Ramen',description:'Un cuenco de fideos en caldo es una opción para una cena informal cerca de Tokyo Station. La foto es orientativa; elegid local y tipo de caldo allí.',source:'https://www.gotokyo.org/en/destinations/central-tokyo/tokyo-station-and-marunouchi/index.html'},
   'Atún de Kuromon':{title:'Cuenco de atún',description:'En el mercado de Kuromon podéis buscar pescado preparado al momento. Este cuenco de atún es una opción visual; comprobad qué ofrece cada puesto y su precio.',source:'https://www.osaka-info.jp/en/spot/gastronomy-kuromon/'},
   'Cena en Pontocho':{title:'Yudofu',description:'Si os apetece cocina de Kioto, el tofu caliente es una opción tradicional. La fotografía muestra cómo puede presentarse, pero comprobad si figura en la carta del restaurante elegido.',source:'https://kyoto.travel/en/food-and-drink/'},
+  'Pescado local guisado':{title:'Pescado guisado',description:'Nitsuke es pescado cocinado en salsa a base de soja. La oficina turística incluye pescado local guisado entre las opciones de Kii-Katsuura. La foto muestra este tipo de plato, no la pesca concreta del día.',source:'https://nachikan.jp/en/restaurant/4247/'},
+  'Soba y pescado en Kii-Katsuura':{title:'Soba',description:'Los fideos de trigo sarraceno son otra posibilidad para sentarse a comer. En Kii-Katsuura hay restaurantes que los sirven solos o junto con platos de pescado; mirad la carta antes de elegir.',source:'https://nachikan.jp/en/restaurant/'},
 });
 for(const [key,[japanese,english,file,imageCredit,imageLicense]] of Object.entries(foodIllustrations)){
   const note=foodNotes[key];
@@ -57,7 +61,7 @@ for(const [key,[japanese,english,file,imageCredit,imageLicense]] of Object.entri
 export const foodTipNotes:Record<string,string>={
   'kuromon-food':'Atún de Kuromon',
   'dotonbori-dinner':'dotonbori',
-  'katsuura-seafood':'Nigiwai Ichiba, puerto de Katsuura',
+  'katsuura-seafood':'Pescado local guisado',
   'nigiwai-tuna':'Nigiwai Ichiba, puerto de Katsuura',
   'nishiki-tasting':'Nishiki Market',
   'pontocho-dinner':'Cena en Pontocho',
